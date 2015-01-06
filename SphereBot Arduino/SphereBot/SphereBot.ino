@@ -105,6 +105,7 @@ void setup()
     delay(2000);
     xAxisStepper.enableStepper(false);
 #endif
+	while (true) loop();
 }
 
 void loop() // input loop, looks for manual input and then checks to see if and serial commands are coming in
@@ -161,32 +162,32 @@ void commitSteppers(double speedrate)
   rotationStepper.counter = negative_half_interval;
   xAxisStepper.counter = negative_half_interval;
 
-//  Serial.print("Speedrate:");
-//  Serial.print(speedrate, 6);
-//  Serial.print(" dX:");
-//  Serial.print(deltaStepsX);
-//  Serial.print(" dY:");
-//  Serial.print(deltaStepsY);
-//  Serial.print(" masterSteps:");
-//  Serial.print(masterSteps);
-//  Serial.print(" dDistX:");
-//  Serial.print(deltaDistanceX);
-//  Serial.print(" dDistY:");	
-//  Serial.print(deltaDistanceY);
-//  Serial.print(" distance:");
-//  Serial.print(distance);
-//  Serial.print(" sub1:");
-//  Serial.print(sub1, 6);
-//  Serial.print(" sub2:");
-//  Serial.print(sub2, 6);
-//  Serial.print(" intervals:");
-//  Serial.print(intervals);
-//  Serial.print(" negative_half_interval:");
-//  Serial.println(negative_half_interval);
-//  Serial.print("Y currentStepCount:");
-//  Serial.print(rotationStepper.currentStepcount);
-//  Serial.print(" targetStepCount:");
-//  Serial.println(rotationStepper.targetStepcount);
+  /*Serial.print("Speedrate:");
+  Serial.print(speedrate, 6);
+  Serial.print(" dX:");
+  Serial.print(deltaStepsX);
+  Serial.print(" dY:");
+  Serial.print(deltaStepsY);
+  Serial.print(" masterSteps:");
+  Serial.print(masterSteps);
+  Serial.print(" dDistX:");
+  Serial.print(deltaDistanceX);
+  Serial.print(" dDistY:");	
+  Serial.print(deltaDistanceY);
+  Serial.print(" distance:");
+  Serial.print(distance);
+  Serial.print(" sub1:");
+  Serial.print(sub1, 6);
+  Serial.print(" sub2:");
+  Serial.print(sub2, 6);
+  Serial.print(" intervals:");
+  Serial.print(intervals);
+  Serial.print(" negative_half_interval:");
+  Serial.println(negative_half_interval);
+  Serial.print("Y currentStepCount:");
+  Serial.print(rotationStepper.delta);
+  Serial.print(" targetStepCount:");
+  Serial.println(rotationStepper.delta);*/
 
   isRunning=true;
 }
